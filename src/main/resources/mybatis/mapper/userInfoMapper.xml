@@ -6,6 +6,11 @@
     <result column="growScore" jdbcType="INTEGER" property="growscore" />
     <result column="exchangeScore" jdbcType="INTEGER" property="exchangescore" />
     <result column="scoreTotal" jdbcType="INTEGER" property="scoretotal" />
+    <result column="lastLoginDate" jdbcType="VARCHAR" property="lastlogindate" />
+    <result column="fillInformationBefore" jdbcType="INTEGER" property="fillinformationbefore" />
+    <result column="bloodSugarCount" jdbcType="INTEGER" property="bloodsugarcount" />
+    <result column="bfzDate" jdbcType="VARCHAR" property="bfzdate" />
+    <result column="ydgnDate" jdbcType="VARCHAR" property="ydgndate" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -66,7 +71,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, growScore, exchangeScore, scoreTotal
+    id, growScore, exchangeScore, scoreTotal, lastLoginDate, fillInformationBefore, bloodSugarCount, 
+    bfzDate, ydgnDate
   </sql>
   <select id="selectByExample" parameterType="com.course.coursedesign2022.pojo.userInfoExample" resultMap="BaseResultMap">
     select
@@ -100,9 +106,13 @@
   </delete>
   <insert id="insert" parameterType="com.course.coursedesign2022.pojo.userInfo">
     insert into user (id, growScore, exchangeScore, 
-      scoreTotal)
+      scoreTotal, lastLoginDate, fillInformationBefore, 
+      bloodSugarCount, bfzDate, ydgnDate
+      )
     values (#{id,jdbcType=INTEGER}, #{growscore,jdbcType=INTEGER}, #{exchangescore,jdbcType=INTEGER}, 
-      #{scoretotal,jdbcType=INTEGER})
+      #{scoretotal,jdbcType=INTEGER}, #{lastlogindate,jdbcType=VARCHAR}, #{fillinformationbefore,jdbcType=INTEGER}, 
+      #{bloodsugarcount,jdbcType=INTEGER}, #{bfzdate,jdbcType=VARCHAR}, #{ydgndate,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.course.coursedesign2022.pojo.userInfo">
     insert into user
@@ -119,6 +129,21 @@
       <if test="scoretotal != null">
         scoreTotal,
       </if>
+      <if test="lastlogindate != null">
+        lastLoginDate,
+      </if>
+      <if test="fillinformationbefore != null">
+        fillInformationBefore,
+      </if>
+      <if test="bloodsugarcount != null">
+        bloodSugarCount,
+      </if>
+      <if test="bfzdate != null">
+        bfzDate,
+      </if>
+      <if test="ydgndate != null">
+        ydgnDate,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -132,6 +157,21 @@
       </if>
       <if test="scoretotal != null">
         #{scoretotal,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogindate != null">
+        #{lastlogindate,jdbcType=VARCHAR},
+      </if>
+      <if test="fillinformationbefore != null">
+        #{fillinformationbefore,jdbcType=INTEGER},
+      </if>
+      <if test="bloodsugarcount != null">
+        #{bloodsugarcount,jdbcType=INTEGER},
+      </if>
+      <if test="bfzdate != null">
+        #{bfzdate,jdbcType=VARCHAR},
+      </if>
+      <if test="ydgndate != null">
+        #{ydgndate,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -156,6 +196,21 @@
       <if test="record.scoretotal != null">
         scoreTotal = #{record.scoretotal,jdbcType=INTEGER},
       </if>
+      <if test="record.lastlogindate != null">
+        lastLoginDate = #{record.lastlogindate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fillinformationbefore != null">
+        fillInformationBefore = #{record.fillinformationbefore,jdbcType=INTEGER},
+      </if>
+      <if test="record.bloodsugarcount != null">
+        bloodSugarCount = #{record.bloodsugarcount,jdbcType=INTEGER},
+      </if>
+      <if test="record.bfzdate != null">
+        bfzDate = #{record.bfzdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ydgndate != null">
+        ydgnDate = #{record.ydgndate,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -166,7 +221,12 @@
     set id = #{record.id,jdbcType=INTEGER},
       growScore = #{record.growscore,jdbcType=INTEGER},
       exchangeScore = #{record.exchangescore,jdbcType=INTEGER},
-      scoreTotal = #{record.scoretotal,jdbcType=INTEGER}
+      scoreTotal = #{record.scoretotal,jdbcType=INTEGER},
+      lastLoginDate = #{record.lastlogindate,jdbcType=VARCHAR},
+      fillInformationBefore = #{record.fillinformationbefore,jdbcType=INTEGER},
+      bloodSugarCount = #{record.bloodsugarcount,jdbcType=INTEGER},
+      bfzDate = #{record.bfzdate,jdbcType=VARCHAR},
+      ydgnDate = #{record.ydgndate,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -183,6 +243,21 @@
       <if test="scoretotal != null">
         scoreTotal = #{scoretotal,jdbcType=INTEGER},
       </if>
+      <if test="lastlogindate != null">
+        lastLoginDate = #{lastlogindate,jdbcType=VARCHAR},
+      </if>
+      <if test="fillinformationbefore != null">
+        fillInformationBefore = #{fillinformationbefore,jdbcType=INTEGER},
+      </if>
+      <if test="bloodsugarcount != null">
+        bloodSugarCount = #{bloodsugarcount,jdbcType=INTEGER},
+      </if>
+      <if test="bfzdate != null">
+        bfzDate = #{bfzdate,jdbcType=VARCHAR},
+      </if>
+      <if test="ydgndate != null">
+        ydgnDate = #{ydgndate,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -190,7 +265,12 @@
     update user
     set growScore = #{growscore,jdbcType=INTEGER},
       exchangeScore = #{exchangescore,jdbcType=INTEGER},
-      scoreTotal = #{scoretotal,jdbcType=INTEGER}
+      scoreTotal = #{scoretotal,jdbcType=INTEGER},
+      lastLoginDate = #{lastlogindate,jdbcType=VARCHAR},
+      fillInformationBefore = #{fillinformationbefore,jdbcType=INTEGER},
+      bloodSugarCount = #{bloodsugarcount,jdbcType=INTEGER},
+      bfzDate = #{bfzdate,jdbcType=VARCHAR},
+      ydgnDate = #{ydgndate,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
