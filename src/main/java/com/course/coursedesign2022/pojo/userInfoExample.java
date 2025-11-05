@@ -343,6 +343,336 @@ public class userInfoExample {
             addCriterion("scoreTotal not between", value1, value2, "scoretotal");
             return (Criteria) this;
         }
+
+        public Criteria andLastlogindateIsNull() {
+            addCriterion("lastLoginDate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateIsNotNull() {
+            addCriterion("lastLoginDate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateEqualTo(String value) {
+            addCriterion("lastLoginDate =", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateNotEqualTo(String value) {
+            addCriterion("lastLoginDate <>", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateGreaterThan(String value) {
+            addCriterion("lastLoginDate >", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateGreaterThanOrEqualTo(String value) {
+            addCriterion("lastLoginDate >=", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateLessThan(String value) {
+            addCriterion("lastLoginDate <", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateLessThanOrEqualTo(String value) {
+            addCriterion("lastLoginDate <=", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateLike(String value) {
+            addCriterion("lastLoginDate like", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateNotLike(String value) {
+            addCriterion("lastLoginDate not like", value, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateIn(List<String> values) {
+            addCriterion("lastLoginDate in", values, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateNotIn(List<String> values) {
+            addCriterion("lastLoginDate not in", values, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateBetween(String value1, String value2) {
+            addCriterion("lastLoginDate between", value1, value2, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastlogindateNotBetween(String value1, String value2) {
+            addCriterion("lastLoginDate not between", value1, value2, "lastlogindate");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeIsNull() {
+            addCriterion("fillInformationBefore is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeIsNotNull() {
+            addCriterion("fillInformationBefore is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeEqualTo(Integer value) {
+            addCriterion("fillInformationBefore =", value, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeNotEqualTo(Integer value) {
+            addCriterion("fillInformationBefore <>", value, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeGreaterThan(Integer value) {
+            addCriterion("fillInformationBefore >", value, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("fillInformationBefore >=", value, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeLessThan(Integer value) {
+            addCriterion("fillInformationBefore <", value, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeLessThanOrEqualTo(Integer value) {
+            addCriterion("fillInformationBefore <=", value, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeIn(List<Integer> values) {
+            addCriterion("fillInformationBefore in", values, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeNotIn(List<Integer> values) {
+            addCriterion("fillInformationBefore not in", values, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeBetween(Integer value1, Integer value2) {
+            addCriterion("fillInformationBefore between", value1, value2, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andFillinformationbeforeNotBetween(Integer value1, Integer value2) {
+            addCriterion("fillInformationBefore not between", value1, value2, "fillinformationbefore");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountIsNull() {
+            addCriterion("bloodSugarCount is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountIsNotNull() {
+            addCriterion("bloodSugarCount is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountEqualTo(Integer value) {
+            addCriterion("bloodSugarCount =", value, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountNotEqualTo(Integer value) {
+            addCriterion("bloodSugarCount <>", value, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountGreaterThan(Integer value) {
+            addCriterion("bloodSugarCount >", value, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("bloodSugarCount >=", value, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountLessThan(Integer value) {
+            addCriterion("bloodSugarCount <", value, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountLessThanOrEqualTo(Integer value) {
+            addCriterion("bloodSugarCount <=", value, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountIn(List<Integer> values) {
+            addCriterion("bloodSugarCount in", values, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountNotIn(List<Integer> values) {
+            addCriterion("bloodSugarCount not in", values, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountBetween(Integer value1, Integer value2) {
+            addCriterion("bloodSugarCount between", value1, value2, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBloodsugarcountNotBetween(Integer value1, Integer value2) {
+            addCriterion("bloodSugarCount not between", value1, value2, "bloodsugarcount");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateIsNull() {
+            addCriterion("bfzDate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateIsNotNull() {
+            addCriterion("bfzDate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateEqualTo(String value) {
+            addCriterion("bfzDate =", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateNotEqualTo(String value) {
+            addCriterion("bfzDate <>", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateGreaterThan(String value) {
+            addCriterion("bfzDate >", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateGreaterThanOrEqualTo(String value) {
+            addCriterion("bfzDate >=", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateLessThan(String value) {
+            addCriterion("bfzDate <", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateLessThanOrEqualTo(String value) {
+            addCriterion("bfzDate <=", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateLike(String value) {
+            addCriterion("bfzDate like", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateNotLike(String value) {
+            addCriterion("bfzDate not like", value, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateIn(List<String> values) {
+            addCriterion("bfzDate in", values, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateNotIn(List<String> values) {
+            addCriterion("bfzDate not in", values, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateBetween(String value1, String value2) {
+            addCriterion("bfzDate between", value1, value2, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBfzdateNotBetween(String value1, String value2) {
+            addCriterion("bfzDate not between", value1, value2, "bfzdate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateIsNull() {
+            addCriterion("ydgnDate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateIsNotNull() {
+            addCriterion("ydgnDate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateEqualTo(String value) {
+            addCriterion("ydgnDate =", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateNotEqualTo(String value) {
+            addCriterion("ydgnDate <>", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateGreaterThan(String value) {
+            addCriterion("ydgnDate >", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateGreaterThanOrEqualTo(String value) {
+            addCriterion("ydgnDate >=", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateLessThan(String value) {
+            addCriterion("ydgnDate <", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateLessThanOrEqualTo(String value) {
+            addCriterion("ydgnDate <=", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateLike(String value) {
+            addCriterion("ydgnDate like", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateNotLike(String value) {
+            addCriterion("ydgnDate not like", value, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateIn(List<String> values) {
+            addCriterion("ydgnDate in", values, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateNotIn(List<String> values) {
+            addCriterion("ydgnDate not in", values, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateBetween(String value1, String value2) {
+            addCriterion("ydgnDate between", value1, value2, "ydgndate");
+            return (Criteria) this;
+        }
+
+        public Criteria andYdgndateNotBetween(String value1, String value2) {
+            addCriterion("ydgnDate not between", value1, value2, "ydgndate");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

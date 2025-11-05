@@ -9,6 +9,16 @@ public class userInfo {
 
     private Integer scoretotal;
 
+    private String lastlogindate;
+
+    private Integer fillinformationbefore;
+
+    private Integer bloodsugarcount;
+
+    private String bfzdate;
+
+    private String ydgndate;
+
     public Integer getId() {
         return id;
     }
@@ -39,5 +49,45 @@ public class userInfo {
 
     public void setScoretotal(Integer scoretotal) {
         this.scoretotal = scoretotal;
+    }
+
+    public String getLastlogindate() {
+        return lastlogindate;
+    }
+
+    public void setLastlogindate(String lastlogindate) {
+        this.lastlogindate = lastlogindate == null ? null : lastlogindate.trim();
+    }
+
+    public Integer getFillinformationbefore() {
+        return fillinformationbefore;
+    }
+
+    public void setFillinformationbefore(Integer fillinformationbefore) {
+        this.fillinformationbefore = fillinformationbefore;
+    }
+
+    public Integer getBloodsugarcount() {
+        return bloodsugarcount;
+    }
+
+    public void setBloodsugarcount(Integer bloodsugarcount) {
+        this.bloodsugarcount = bloodsugarcount;
+    }
+
+    public String getBfzdate() {
+        return bfzdate;
+    }
+
+    public void setBfzdate(String bfzdate) {
+        this.bfzdate = bfzdate == null ? null : bfzdate.trim();
+    }
+
+    public String getYdgndate() {
+        return ydgndate;
+    }
+
+    public void setYdgndate(String ydgndate) {
+        this.ydgndate = ydgndate == null ? null : ydgndate.trim();
     }
 }
