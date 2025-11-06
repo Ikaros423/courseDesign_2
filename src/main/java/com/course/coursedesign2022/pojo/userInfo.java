@@ -106,4 +106,19 @@ public class userInfo {
         // 通过ChronoUnit计算相差的月份
         return ChronoUnit.MONTHS.between(startDate, endDate);
     }
+
+    @Override
+    public String toString() {
+        return "userInfo{" +
+                "id=" + id +
+                ", growScore=" + growscore +
+                ", exchangeScore=" + exchangescore +
+                ", scoreTotal=" + scoretotal +
+                ", lastLoginDate=" + lastlogindate +
+                ", fillInformationBefore=" + fillinformationbefore +
+                ", bloodSugarCount=" + bloodsugarcount +
+                ", bfzDate=" + bfzdate +
+                ", ydgnDate=" + ydgndate +
+                '}';
+    }
 }
