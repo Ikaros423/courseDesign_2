@@ -7,11 +7,11 @@ import java.time.temporal.ChronoUnit;
 public class userInfo {
     private Integer id;
     //成长积分数
-    private Integer growscore;
+    private Integer growscore=0;
     //可兑换积分数
-    private Integer exchangescore;
+    private Integer exchangescore=0;
     //总积分数
-    private Integer scoretotal;
+    private Integer scoretotal=0;
     //上次登录日期
     private String lastlogindate;
     //是否填写过个人资料，默认未填写
