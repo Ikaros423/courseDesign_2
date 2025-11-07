@@ -40,8 +40,8 @@ public class AutoController {
         return userInfo;
     }
 
-    @PutMapping(value="/user/{id}")
-    public userInfo updateUser(@PathVariable("id") Integer id,
+    @PutMapping(value="/user/{id1}")
+    public userInfo updateUser(@PathVariable("id1") Integer id,
                                   @RequestParam("grow") Integer grow,
                                   @RequestParam("exchange") Integer exchange,
                                   @RequestParam("total") Integer total){
