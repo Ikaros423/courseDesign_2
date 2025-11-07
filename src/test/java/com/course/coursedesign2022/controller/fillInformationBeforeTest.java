@@ -13,8 +13,6 @@ import org.springframework.test.web.servlet.RequestBuilder;
 
 import javax.inject.Inject;
 
-import java.time.LocalDate;
-
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -22,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class bfzNoteTest {
+public class fillInformationBeforeTest {
     static private Integer id;
     static private String url;
 
@@ -40,7 +38,7 @@ public class bfzNoteTest {
     @BeforeAll
     public static void setupBeforeAll() throws Exception {
         id=1;
-        url="/bfzNote/" + id;
+        url="/fillInformation/" + id;
     }
 
     @BeforeEach
@@ -54,25 +52,25 @@ public class bfzNoteTest {
     }
 
     @Test
-    public void testBfzNote_NotFilledThisYear() throws Exception {
+    public void testFillInformationBefore_NotFilledBefore() throws Exception {
         printUser(id);
         userInfo userInfoOld = userInfoMapper.selectByPrimaryKey(id);
         RequestBuilder requestBuilder;
         requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("bfzNote updated")));
+                .andExpect(content().string(equalTo("fillInformation updated")));
 
         userInfo userInfoNew = userInfoMapper.selectByPrimaryKey(id);
-        assert (userInfoNew.getGrowscore() - userInfoOld.getGrowscore()) == 3;
-        assert (userInfoNew.getScoretotal() - userInfoOld.getScoretotal()) == 3;
+        assert (userInfoNew.getGrowscore() - userInfoOld.getGrowscore()) == 2;
+        assert (userInfoNew.getScoretotal() - userInfoOld.getScoretotal()) == 2;
         printUser(id);
     }
 
     @Test
-    public void testBfzNote_FilledThisYear() throws Exception {
+    public void testFillInformationBefore_FilledBefore() throws Exception {
         userInfo userInfoOld = userInfoMapper.selectByPrimaryKey(id);
-        userInfoOld.setBfzdate(String.valueOf(LocalDate.now().getYear())); // 设置今年记录过
+        userInfoOld.setFillinformationbefore(1); // 设置填写过
         userInfoMapper.updateByPrimaryKey(userInfoOld);
         printUser(id);
 
@@ -80,7 +78,7 @@ public class bfzNoteTest {
         requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("bfzNote updated")));
+                .andExpect(content().string(equalTo("fillInformation updated")));
 
         userInfo userInfoNew = userInfoMapper.selectByPrimaryKey(id);
         assert (userInfoNew.getGrowscore() - userInfoOld.getGrowscore()) == 0;
