@@ -2,6 +2,7 @@ package com.course.coursedesign2022.controller;
 
 import com.course.coursedesign2022.mapper.userInfoMapper;
 import com.course.coursedesign2022.pojo.userInfo;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 public class bfzNoteTest {
-    private Integer id;
+    static private Integer id;
+    static private String url;
 
     @Inject
     private MockMvc mockMvc;
@@ -35,9 +37,14 @@ public class bfzNoteTest {
         System.out.println(userInfo);
     }
 
+    @BeforeAll
+    public static void setupBeforeAll() throws Exception {
+        id=1;
+        url="/bfzNote/" + id;
+    }
+
     @BeforeEach
     public void setup() throws Exception {
-        this.id = 1;
         if (userInfoMapper.selectByPrimaryKey(id) != null) {
             userInfoMapper.deleteByPrimaryKey(id);
         }
@@ -51,7 +58,6 @@ public class bfzNoteTest {
         printUser(id);
         userInfo userInfoOld = userInfoMapper.selectByPrimaryKey(id);
         RequestBuilder requestBuilder;
-        String url = "/bfzNote/" + id;
         requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -71,7 +77,6 @@ public class bfzNoteTest {
         printUser(id);
 
         RequestBuilder requestBuilder;
-        String url = "/bfzNote/" + id;
         requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
