@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import javax.inject.Inject;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -60,7 +60,7 @@ public class evaluateReportTest {
         printUser(id);
 
         RequestBuilder requestBuilder;
-        requestBuilder = get(url);
+        requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("evaluateReport success")));
@@ -79,7 +79,7 @@ public class evaluateReportTest {
         printUser(id);
 
         RequestBuilder requestBuilder;
-        requestBuilder = get(url);
+        requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("evaluateReport success")));
@@ -99,7 +99,7 @@ public class evaluateReportTest {
         printUser(id);
 
         RequestBuilder requestBuilder;
-        requestBuilder = get(url);
+        requestBuilder = put(url);
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("evaluateReport success")));
