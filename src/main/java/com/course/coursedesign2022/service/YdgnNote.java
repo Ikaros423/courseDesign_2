@@ -38,7 +38,7 @@ public class YdgnNote {
             userInfo.setScoretotal(total+2);
         }
         userInfoMapper.updateByPrimaryKeySelective(userInfo);
-        System.out.println("bfzNote execute");
+        System.out.println("ydgnNote execute");
         return true;
     }
 }

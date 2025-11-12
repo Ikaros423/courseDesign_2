@@ -12,12 +12,13 @@ public class BloodSugar {
     @Autowired
     userInfoMapper userInfoMapper;
 
-    public boolean bloodSugar(Integer id) {
+    public boolean bloodSugar(int id) {
         userInfo userInfo = userInfoMapper.selectByPrimaryKey(id);
 
         if (userInfo == null) {
             return false;
         }
+
         Integer Grow = userInfo.getGrowscore();
         Integer total = userInfo.getScoretotal();
 
