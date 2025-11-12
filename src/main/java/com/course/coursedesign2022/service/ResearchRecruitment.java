@@ -21,7 +21,7 @@ public class ResearchRecruitment {
         Integer total = userInfo.getScoretotal();
         userInfo.setExchangescore(Exchange + 8);
         userInfo.setScoretotal(total + 8);
-        userInfoMapper.updateByPrimaryKey(userInfo);
+        userInfoMapper.updateByPrimaryKeySelective(userInfo);
 
         System.out.println("researchRecruitment execute");
         return true;
